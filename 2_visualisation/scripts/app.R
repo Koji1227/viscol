@@ -691,3 +691,37 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
+# make a mini corpus for shiny app
+# cut off approx. 1 M lines at the document boundary
+# M365 Copilot generated this code
+
+# library(dplyr)
+# 
+# df <- read_tsv(here('data', 'corp_coca_sample.tsv'))
+# 
+# target_row <- min(1000000, nrow(df))
+# target_id <- df$doc_id[target_row]
+# 
+# cut_row <- df |>
+#   mutate(row = row_number()) |>
+#   filter(row >= target_row, doc_id != target_id) |>
+#   slice(1) |>
+#   pull(row)
+# 
+# if (length(cut_row) == 0) {
+#   cut_row <- nrow(df)
+# } else {
+#   cut_row <- cut_row - 1
+# }
+# 
+# df_subset <- df[1:cut_row, ]
+# 
+# write_tsv(df_subset, here('data', 'corp_coca_short.tsv'))
+# saveRDS(df_subset, here('data', 'corp_coca_short.rds'))
+
+# convert from tsv file to rds file for shiny app
+# to compress the files
+
+# df <- read_tsv(here('data', 'col_verb_coca.tsv'))
+# saveRDS(df, here('data', 'col_verb_coca.rds'))
