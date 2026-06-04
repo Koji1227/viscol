@@ -55,7 +55,7 @@ I deployed VisCol to Shiny App so that everyone can access the tool.
 - `app.R`: It develops a web application VisCol (online version), `network.R` + `list_comparison.R` + `concordance.R` + `app.R` in one file
 
 ### `4_thesis_fig` folder
-I created some figures for the explanation in the thesis
+I created some figures for the explanation in the thesis.
 - `thesis_fig.ipynb`: It creates some figures for the thesis.
 - `survey-multi.csv`: Results of the user testing survey (the part of multiple-choice questions)
 - `coordinate-plane.jpg`: Fig 3.1
